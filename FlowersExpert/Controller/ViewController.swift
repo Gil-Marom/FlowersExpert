@@ -13,6 +13,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     let imagePicker = UIImagePickerController()
     
+    let classifier = Classifier()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +40,17 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
             
             if let userPickedImage = info[.originalImage] as? UIImage {
                 flowerImageView.image = userPickedImage
+                
+                guard let convertedCIImage = CIImage(image: userPickedImage) else {
+                    fatalError("Could not convert UIImage into CIImage")
+                }
+                
+                classifier.detect(image: convertedCIImage)
+                
+                let detectedFlower = classifier.result
+                
+                self.navigationItem.title = detectedFlower
+                
             }
             
             imagePicker.dismiss(animated: true)

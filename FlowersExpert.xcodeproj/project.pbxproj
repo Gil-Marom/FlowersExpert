@@ -14,6 +14,7 @@
 		2B8F21452893273B00B52A15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8F21442893273B00B52A15 /* Assets.xcassets */; };
 		2B8F21482893273B00B52A15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8F21462893273B00B52A15 /* LaunchScreen.storyboard */; };
 		2B8F2150289328BF00B52A15 /* FlowerClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F214F289328BF00B52A15 /* FlowerClassifier.mlmodel */; };
+		2B8F21552894103A00B52A15 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F21542894103A00B52A15 /* Classifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2B8F21472893273B00B52A15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B8F21492893273B00B52A15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B8F214F289328BF00B52A15 /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerClassifier.mlmodel; sourceTree = "<group>"; };
+		2B8F21542894103A00B52A15 /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +62,39 @@
 			children = (
 				2B8F213B2893273B00B52A15 /* AppDelegate.swift */,
 				2B8F213D2893273B00B52A15 /* SceneDelegate.swift */,
-				2B8F213F2893273B00B52A15 /* ViewController.swift */,
-				2B8F21412893273B00B52A15 /* Main.storyboard */,
+				2B8F215328940FF100B52A15 /* Model */,
+				2B8F215128940FB900B52A15 /* View */,
+				2B8F215228940FDB00B52A15 /* Controller */,
 				2B8F21442893273B00B52A15 /* Assets.xcassets */,
 				2B8F21462893273B00B52A15 /* LaunchScreen.storyboard */,
 				2B8F214F289328BF00B52A15 /* FlowerClassifier.mlmodel */,
 				2B8F21492893273B00B52A15 /* Info.plist */,
 			);
 			path = FlowersExpert;
+			sourceTree = "<group>";
+		};
+		2B8F215128940FB900B52A15 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B8F21412893273B00B52A15 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B8F215228940FDB00B52A15 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B8F213F2893273B00B52A15 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B8F215328940FF100B52A15 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B8F21542894103A00B52A15 /* Classifier.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B8F21552894103A00B52A15 /* Classifier.swift in Sources */,
 				2B8F2150289328BF00B52A15 /* FlowerClassifier.mlmodel in Sources */,
 				2B8F21402893273B00B52A15 /* ViewController.swift in Sources */,
 				2B8F213C2893273B00B52A15 /* AppDelegate.swift in Sources */,
