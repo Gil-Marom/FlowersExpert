@@ -9,5 +9,5 @@ import Foundation
 
 struct WikiModel {
     let summary: String
-    let imageURL: String
+    let imageURL: URL?
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ViewController: UIViewController, UINavigationControllerDelegate {
     
@@ -44,7 +45,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             
             if let userPickedImage = info[.originalImage] as? UIImage {
-                flowerImageView.image = userPickedImage
                 
                 guard let convertedCIImage = CIImage(image: userPickedImage) else {
                     fatalError("Could not convert UIImage into CIImage")
@@ -75,8 +75,9 @@ extension ViewController: WikipediaManagerDelegate {
         
         DispatchQueue.main.async {
             self.summaryLabel.text = wikiInfo.summary
+            self.flowerImageView.sd_setImage(with: wikiInfo.imageURL)
         }
-        print(wikiInfo.imageURL)
+
     }
     
     func didFailWithError(_ error: Error) {

@@ -54,8 +54,9 @@ struct WikipediaManager {
             let decodedData = try decoder.decode(WikiData.self, from: wikiData)
             let extract = decodedData.extract
             let imageSource = decodedData.originalimage.source
+            let imageURL = URL(string: imageSource)
             
-            let wikiInfo = WikiModel(summary: extract, imageURL: imageSource)
+            let wikiInfo = WikiModel(summary: extract, imageURL: imageURL)
             return wikiInfo
             
         } catch {
