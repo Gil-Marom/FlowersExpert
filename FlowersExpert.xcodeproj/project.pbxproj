@@ -18,6 +18,7 @@
 		2B8F2157289543EF00B52A15 /* WikipediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F2156289543EF00B52A15 /* WikipediaManager.swift */; };
 		2B8F21592895524B00B52A15 /* WikiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F21582895524B00B52A15 /* WikiData.swift */; };
 		2B8F215B2895525E00B52A15 /* WikiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F215A2895525E00B52A15 /* WikiModel.swift */; };
+		89E3E41FAB203F8F290FBD18 /* Pods_FlowersExpert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD606DE1D6142675E4D0FD19 /* Pods_FlowersExpert.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,9 @@
 		2B8F2156289543EF00B52A15 /* WikipediaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaManager.swift; sourceTree = "<group>"; };
 		2B8F21582895524B00B52A15 /* WikiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiData.swift; sourceTree = "<group>"; };
 		2B8F215A2895525E00B52A15 /* WikiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiModel.swift; sourceTree = "<group>"; };
+		B4C42BF3C888A2ED313D959A /* Pods-FlowersExpert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowersExpert.debug.xcconfig"; path = "Target Support Files/Pods-FlowersExpert/Pods-FlowersExpert.debug.xcconfig"; sourceTree = "<group>"; };
+		C9D9EECCDF9D091D10833A35 /* Pods-FlowersExpert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowersExpert.release.xcconfig"; path = "Target Support Files/Pods-FlowersExpert/Pods-FlowersExpert.release.xcconfig"; sourceTree = "<group>"; };
+		DD606DE1D6142675E4D0FD19 /* Pods_FlowersExpert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowersExpert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89E3E41FAB203F8F290FBD18 /* Pods_FlowersExpert.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		234A5C3A59BC3F93091E7788 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4C42BF3C888A2ED313D959A /* Pods-FlowersExpert.debug.xcconfig */,
+				C9D9EECCDF9D091D10833A35 /* Pods-FlowersExpert.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		2B8F212F2893273B00B52A15 = {
 			isa = PBXGroup;
 			children = (
 				2B8F213A2893273B00B52A15 /* FlowersExpert */,
 				2B8F21392893273B00B52A15 /* Products */,
+				234A5C3A59BC3F93091E7788 /* Pods */,
+				E45C76F666FDB66C0203C12D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +123,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E45C76F666FDB66C0203C12D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD606DE1D6142675E4D0FD19 /* Pods_FlowersExpert.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B8F214C2893273B00B52A15 /* Build configuration list for PBXNativeTarget "FlowersExpert" */;
 			buildPhases = (
+				FE620E57348FE7354D472531 /* [CP] Check Pods Manifest.lock */,
 				2B8F21342893273B00B52A15 /* Sources */,
 				2B8F21352893273B00B52A15 /* Frameworks */,
 				2B8F21362893273B00B52A15 /* Resources */,
+				A9CFDFA1276AC7923DCB6ACD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,6 +198,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A9CFDFA1276AC7923DCB6ACD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlowersExpert/Pods-FlowersExpert-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlowersExpert/Pods-FlowersExpert-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlowersExpert/Pods-FlowersExpert-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE620E57348FE7354D472531 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlowersExpert-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2B8F21342893273B00B52A15 /* Sources */ = {
@@ -326,6 +395,7 @@
 		};
 		2B8F214D2893273B00B52A15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4C42BF3C888A2ED313D959A /* Pods-FlowersExpert.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -354,6 +424,7 @@
 		};
 		2B8F214E2893273B00B52A15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9D9EECCDF9D091D10833A35 /* Pods-FlowersExpert.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
