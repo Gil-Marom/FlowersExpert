@@ -15,12 +15,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     let classifier = Classifier()
     
+    var wikipediaManager = WikipediaManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
         imagePicker.allowsEditing = false
+        wikipediaManager.delegate = self
         
     }
     
@@ -49,6 +52,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
                 
                 let detectedFlower = classifier.result
                 
+                wikipediaManager.fetchWikiInfo(flowerName: detectedFlower)
+                
                 self.navigationItem.title = detectedFlower
                 
             }
@@ -58,3 +63,19 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         }
         
     }
+
+
+//MARK: - WikipediaManagerDelegate
+
+extension ViewController: WikipediaManagerDelegate {
+    
+    func wikiInfoDidUpdate(_ wikipediaManager: WikipediaManager, wikiInfo: WikiModel) {
+        print(wikiInfo.summary)
+        print(wikiInfo.imageURL)
+    }
+    
+    func didFailWithError(_ error: Error) {
+        print(error)
+    }
+
+}

@@ -15,6 +15,9 @@
 		2B8F21482893273B00B52A15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8F21462893273B00B52A15 /* LaunchScreen.storyboard */; };
 		2B8F2150289328BF00B52A15 /* FlowerClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F214F289328BF00B52A15 /* FlowerClassifier.mlmodel */; };
 		2B8F21552894103A00B52A15 /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F21542894103A00B52A15 /* Classifier.swift */; };
+		2B8F2157289543EF00B52A15 /* WikipediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F2156289543EF00B52A15 /* WikipediaManager.swift */; };
+		2B8F21592895524B00B52A15 /* WikiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F21582895524B00B52A15 /* WikiData.swift */; };
+		2B8F215B2895525E00B52A15 /* WikiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F215A2895525E00B52A15 /* WikiModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		2B8F21492893273B00B52A15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B8F214F289328BF00B52A15 /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerClassifier.mlmodel; sourceTree = "<group>"; };
 		2B8F21542894103A00B52A15 /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
+		2B8F2156289543EF00B52A15 /* WikipediaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaManager.swift; sourceTree = "<group>"; };
+		2B8F21582895524B00B52A15 /* WikiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiData.swift; sourceTree = "<group>"; };
+		2B8F215A2895525E00B52A15 /* WikiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				2B8F21542894103A00B52A15 /* Classifier.swift */,
+				2B8F2156289543EF00B52A15 /* WikipediaManager.swift */,
+				2B8F21582895524B00B52A15 /* WikiData.swift */,
+				2B8F215A2895525E00B52A15 /* WikiModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +180,9 @@
 				2B8F21552894103A00B52A15 /* Classifier.swift in Sources */,
 				2B8F2150289328BF00B52A15 /* FlowerClassifier.mlmodel in Sources */,
 				2B8F21402893273B00B52A15 /* ViewController.swift in Sources */,
+				2B8F21592895524B00B52A15 /* WikiData.swift in Sources */,
+				2B8F215B2895525E00B52A15 /* WikiModel.swift in Sources */,
+				2B8F2157289543EF00B52A15 /* WikipediaManager.swift in Sources */,
 				2B8F213C2893273B00B52A15 /* AppDelegate.swift in Sources */,
 				2B8F213E2893273B00B52A15 /* SceneDelegate.swift in Sources */,
 			);
