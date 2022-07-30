@@ -11,6 +11,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var flowerImageView: UIImageView!
     
+    @IBOutlet weak var summaryLabel: UILabel!
+    
     let imagePicker = UIImagePickerController()
     
     let classifier = Classifier()
@@ -70,7 +72,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 extension ViewController: WikipediaManagerDelegate {
     
     func wikiInfoDidUpdate(_ wikipediaManager: WikipediaManager, wikiInfo: WikiModel) {
-        print(wikiInfo.summary)
+        
+        DispatchQueue.main.async {
+            self.summaryLabel.text = wikiInfo.summary
+        }
         print(wikiInfo.imageURL)
     }
     
